@@ -1,0 +1,23 @@
+{
+  "name": "burnt-toast",
+  "version": "0.1.1",
+  "description": "An Android style toasts",
+  "main": "build/BurntToast.js",
+  "keywords": [
+    "toast",
+    "snackbar"
+  ],
+  "author": "Jordan Austin",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jordanaustin/BurntToast.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jordanaustin/BurntToast/issues"
+  },
+  "homepage": "https://github.com/jordanaustin/BurntToast"
+}

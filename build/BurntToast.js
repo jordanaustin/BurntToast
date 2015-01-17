@@ -32,6 +32,8 @@ function BurntToast(config) { // This is a singleton. Use makeToast to show a to
     }
 
     this._checkQueue = function() {
+        this.el.classList.remove('left');
+        this.el.classList.remove('top');
 
         this.el.removeEventListener('transitionend', this._checkQueue);
         if (this.queue.length > 0) {
@@ -48,6 +50,15 @@ BurntToast.prototype._popUpToast = function() {
 BurntToast.prototype._makeToast = function(toastObj) {
     this.message.textContent = toastObj.message;
 
+    if(toastObj.options && toastObj.options.location) {
+        if(toastObj.options.location.top) {
+            this.el.classList.add('top');
+        }
+        if(toastObj.options.location.left) {
+            this.el.classList.add('left');
+        }
+    }
+
     this._popUpToast();
 
     this.timer = setTimeout(function() {
@@ -58,18 +69,13 @@ BurntToast.prototype._makeToast = function(toastObj) {
 
 BurntToast.prototype.hideToast = function() {
     this.el.classList.remove('show');
+
     clearTimeout(this.timer);
     this.timer = null;
 };
 
 BurntToast.prototype.makeToast = function(string, options) {
-    options = options || { duration: 1000, location: 'bottom' };
-
-    if (options) {
-        if(options.location && options.location === 'top') {
-            this.el.classList.add('top');
-        }
-    }
+    options = options || { duration: 1400, location: {bottom: true, middle: true} };
 
     var toastObj = {
             message: string,
@@ -82,4 +88,8 @@ BurntToast.prototype.makeToast = function(string, options) {
     }
 };
 
-module.exports = BurntToast;
+if (typeof exports !== 'undefined') {
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = BurntToast;
+  }
+}
