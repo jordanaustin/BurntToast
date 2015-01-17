@@ -82,4 +82,4 @@ BurntToast.prototype.makeToast = function(string, options) {
     }
 };
 
-modile.exports = BurntToast;
+module.exports = BurntToast;
