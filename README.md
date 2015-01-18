@@ -10,10 +10,10 @@ If using burnt toast without npm or require simply include the BurntToast.js fil
 
     <script src="path/to/BurntToast.js"></script>
 
-Then instansiate BurntToast once and then call makeToast
+Then instantiate BurntToast once and then call makeToast
 
     var burntToast = new BurntToast();
     burntToast.makeToast('My first BurntToast');
 
-Done.
+Done. Go burn toast!
 
