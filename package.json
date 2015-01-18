@@ -1,11 +1,12 @@
 {
   "name": "burnt-toast",
-  "version": "0.1.2",
-  "description": "An Android style toasts",
+  "version": "0.1.3",
+  "description": "Android style toasts",
   "main": "build/BurntToast.js",
   "keywords": [
     "toast",
     "snackbar"
+    "burnt toast"
   ],
   "author": "Jordan Austin",
   "license": "MIT",
