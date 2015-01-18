@@ -1,7 +1,7 @@
 # BurntToast
 Android style toasts. Oh and it's responsive.
 
-For desktop/responsive sites BurntToast goes from a full width bar at the bottom of the screen (sometimes called a snackbar) to an auto-width toast on larger screens.
+On mobile (small screens) BurntToast goes from a full width bar at the bottom of the screen (sometimes called a snackbar) to an auto-width toast on larger screens.
 
 
 ### Using BurntToast
