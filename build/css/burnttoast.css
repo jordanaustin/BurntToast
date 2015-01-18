@@ -14,7 +14,7 @@
     cursor: pointer;
     font-family: sans-serif;
     transition-property: bottom, opacity;
-    transition: 0.4s cubic-bezier(0.44,0,0.2,0.8);
+    transition: 300ms cubic-bezier(0.44,0,0.2,0.8);
     -webkit-justify-content: flex-start;
     -ms-flex-pack: flex-start;
     justify-content: flex-start;
