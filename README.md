@@ -1,5 +1,8 @@
 # BurntToast
-Android style toasts
+Android style toasts. Oh and it's responsive.
+
+For desktop/responsive sites BurntToast goes from a full width bar at the bottom of the screen (sometimes called a snackbar) to an auto-width toast on larger screens.
+
 
 ### Using BurntToast
 Clone BurntToast or install from npm using:
@@ -28,9 +31,6 @@ I'm working on more positions. Here are the currently supported positions that w
     burntToast.makeToast('Set to bottom left', {
         position: 'left'
     });
-
-For desktop/responsive sites BurntToast goes from a full width bar at the bottom of the screen (sometimes called a snackbar) to an auto-width toast on larger screens.
-
 
 
 Done. Go burn toast!
