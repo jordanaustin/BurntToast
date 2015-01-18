@@ -50,11 +50,11 @@ BurntToast.prototype._popUpToast = function() {
 BurntToast.prototype._makeToast = function(toastObj) {
     this.message.textContent = toastObj.message;
 
-    if(toastObj.options && toastObj.options.location) {
-        if(toastObj.options.location.top) {
+    if(toastObj.options && toastObj.options.position) {
+        if(toastObj.options.position.top) {
             this.el.classList.add('top');
         }
-        if(toastObj.options.location.left) {
+        if(toastObj.options.position.left) {
             this.el.classList.add('left');
         }
     }
