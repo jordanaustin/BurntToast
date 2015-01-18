@@ -9,9 +9,10 @@ Clone BurntToast or install from npm using:
 
     $  npm install burnt-toast
 
-Using require:
+Using require, just require the BurntToast module and call .makeToast() like:
 
     var burntToast = require('BurntToast');
+    burntToast.makeToast('Mmm I like BurntToast');
 
 If using burnt toast without npm or require simply include the BurntToast.js file in your html document:
 
