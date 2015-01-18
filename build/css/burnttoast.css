@@ -1,0 +1,63 @@
+#burnttoast {
+    width: auto;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    visibility: hidden;
+    bottom: -5em;
+    left: 50vw;
+    opacity: 0;
+    z-index: 201;
+    margin: 4px;
+    padding: 0.75em 1.25em;
+    cursor: pointer;
+    font-family: sans-serif;
+    transition-property: bottom, opacity;
+    transition: 0.4s cubic-bezier(0.44,0,0.2,0.8);
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-transform: translateX(-50%);
+}
+
+#burnttoast.top {
+    bottom: auto;
+    top: -5em;
+}
+#burnttoast.left {
+    left: 0;
+    -webkit-transform: translateX(0);
+}
+#burnttoast.top.show {
+    bottom: auto;
+    top: 0;
+}
+
+#burnttoast.show {
+    transition-property: bottom, opacity;
+    visibility: visible;
+    opacity: 1;
+    bottom: 0;
+}
+
+.burnt-toast {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding: 1em 2em;
+    color: rgb(240,240,240);
+    background: rgba(0,0,0,0.8);
+}
+.burnt-toast p {
+    margin: 0;
+}
+
+@media (max-width: 410px) {
+    #burnttoast {
+        width: 100%;
+        margin: 0;
+        left: 0;
+        -webkit-transform: translateX(0);
+    }
+}
