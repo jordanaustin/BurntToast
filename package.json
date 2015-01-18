@@ -5,7 +5,7 @@
   "main": "build/BurntToast.js",
   "keywords": [
     "toast",
-    "snackbar"
+    "snackbar",
     "burnt toast"
   ],
   "author": "Jordan Austin",
