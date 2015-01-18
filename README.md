@@ -22,7 +22,7 @@ First and foremost you can optionally pass a duration:
         duration: 4000
     });
 
-#### Positioning
+##### Positioning
 I'm working on more positions. Here are the currently supported positions that work on larger screens.
 
     burntToast.makeToast('Set to bottom left', {
