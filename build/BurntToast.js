@@ -32,8 +32,8 @@ function BurntToast(config) { // This is a singleton. Use makeToast to show a to
     }
 
     this._checkQueue = function() {
-        this.el.classList.remove('left');
         this.el.classList.remove('top');
+        this.el.classList.remove('left');
 
         this.el.removeEventListener('transitionend', this._checkQueue);
         if (this.queue.length > 0) {
@@ -63,12 +63,12 @@ BurntToast.prototype._makeToast = function(toastObj) {
 
     this.timer = setTimeout(function() {
         this.hideToast();
-        this.el.addEventListener('transitionend', this._checkQueue);
     }.bind(this), toastObj.options.duration);
 };
 
 BurntToast.prototype.hideToast = function() {
     this.el.classList.remove('show');
+    this.el.addEventListener('transitionend', this._checkQueue);
 
     clearTimeout(this.timer);
     this.timer = null;
