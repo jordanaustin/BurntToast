@@ -1,3 +1,7 @@
+/*
+    Don't use this version, use:
+    /build/css/burnttoast.css or /build/css/burnttoast.min.css
+*/
 #burnttoast {
     width: auto;
     display: -webkit-flex;
@@ -5,21 +9,24 @@
     display: flex;
     position: absolute;
     visibility: hidden;
+    border-radius: 2px;
     bottom: -5em;
     left: 50vw;
     opacity: 0;
+    filter: alpha(opacity=0);
     z-index: 3000;
     margin: 4px;
     padding: 0.75em 1.25em;
     cursor: pointer;
     font-family: sans-serif;
+    font-size: 0.9em;
+    font-weight: 300;
     transition-property: bottom, opacity;
     transition: 0.4s cubic-bezier(0.44,0,0.2,0.8);
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
             justify-content: flex-start;
     -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
             transform: translateX(-50%);
 }
 
@@ -30,7 +37,6 @@
 #burnttoast.left {
     left: 0;
     -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
             transform: translateX(0);
 }
 #burnttoast.top.show {
@@ -42,6 +48,7 @@
     transition-property: bottom, opacity;
     visibility: visible;
     opacity: 1;
+    filter: alpha(opacity=100);
     bottom: 0;
 }
 
@@ -63,7 +70,6 @@
         margin: 0;
         left: 0;
         -webkit-transform: translateX(0);
-            -ms-transform: translateX(0);
                 transform: translateX(0);
     }
 }
