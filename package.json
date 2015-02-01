@@ -1,6 +1,6 @@
 {
   "name": "burnt-toast",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Android style toasts",
   "main": "build/BurntToast.js",
   "keywords": [

@@ -1,5 +1,5 @@
 # BurntToast
-Android style toasts. Oh and it's responsive.
+Android style JavaScript toasts. Oh and it's responsive.
 
 On mobile (small screens) BurntToast goes from a full width bar at the bottom of the screen (sometimes called a snackbar) to an auto-width toast on larger screens.
 
