@@ -52,10 +52,10 @@ BurntToast.prototype._makeToast = function(toastObj) {
 
     if(toastObj.options) {
         if(toastObj.options.hasOwnProperty('location'))
-            if(toastObj.options.location.top) {
+            if(toastObj.options.location.hasOwnProperty('top') && toastObj.options.location.top) {
                 this.el.classList.add('top');
             }
-            if(toastObj.options.location.left) {
+            if(toastObj.options.location.hasOwnProperty('left') && toastObj.options.location.left) {
                 this.el.classList.add('left');
             }
 
