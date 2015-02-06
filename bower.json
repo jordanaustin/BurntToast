@@ -1,0 +1,23 @@
+{
+  "name": "BurntToast",
+  "version": "0.1.5",
+  "homepage": "https://github.com/jordanaustin/BurntToast",
+  "authors": [
+    "Jordan Austin"
+  ],
+  "description": "Android style (JavaScript) toasts",
+  "main": "/build/BurntToast.js",
+  "keywords": [
+    "toast",
+    "snackbar",
+    "burnt-toast"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
