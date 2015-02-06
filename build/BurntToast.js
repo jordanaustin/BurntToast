@@ -51,7 +51,7 @@ BurntToast.prototype._makeToast = function(toastObj) {
     this.message.textContent = toastObj.message;
 
     if(toastObj.options) {
-        if(toastObj.options.location)
+        if(toastObj.options.hasOwnProperty('location'))
             if(toastObj.options.location.top) {
                 this.el.classList.add('top');
             }
