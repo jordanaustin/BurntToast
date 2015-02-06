@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-=======
 /*
     Don't use this version, use:
     /build/css/burnttoast.css or /build/css/burnttoast.min.css
 */
->>>>>>> master
 #burnttoast {
     width: auto;
     display: -webkit-flex;
@@ -12,31 +9,16 @@
     display: flex;
     position: absolute;
     visibility: hidden;
-<<<<<<< HEAD
-    bottom: -5em;
-    left: 50vw;
-    opacity: 0;
-    z-index: 201;
-=======
     border-radius: 2px;
     bottom: -5em;
     left: 50vw;
     opacity: 0;
     filter: alpha(opacity=0);
     z-index: 3000;
->>>>>>> master
     margin: 4px;
     padding: 0.75em 1.25em;
     cursor: pointer;
     font-family: sans-serif;
-<<<<<<< HEAD
-    transition-property: bottom, opacity;
-    transition: 0.4s cubic-bezier(0.44,0,0.2,0.8);
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: flex-start;
-    justify-content: flex-start;
-    -webkit-transform: translateX(-50%);
-=======
     font-size: 0.9em;
     font-weight: 300;
     transition-property: bottom, opacity;
@@ -46,7 +28,6 @@
             justify-content: flex-start;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
->>>>>>> master
 }
 
 #burnttoast.top {
@@ -56,10 +37,7 @@
 #burnttoast.left {
     left: 0;
     -webkit-transform: translateX(0);
-<<<<<<< HEAD
-=======
             transform: translateX(0);
->>>>>>> master
 }
 #burnttoast.top.show {
     bottom: auto;
@@ -70,10 +48,7 @@
     transition-property: bottom, opacity;
     visibility: visible;
     opacity: 1;
-<<<<<<< HEAD
-=======
     filter: alpha(opacity=100);
->>>>>>> master
     bottom: 0;
 }
 
@@ -95,9 +70,6 @@
         margin: 0;
         left: 0;
         -webkit-transform: translateX(0);
-<<<<<<< HEAD
-=======
                 transform: translateX(0);
->>>>>>> master
     }
 }
