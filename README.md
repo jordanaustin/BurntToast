@@ -37,6 +37,9 @@ I'm working on more positions. Here are the currently supported positions that w
         position: 'left'
     });
 
+##### Let me know
+If you're using BurntToast and feel like letting me know, please do. I'd love to see it in action.
+
 
 Done. Go burn toast!
 
