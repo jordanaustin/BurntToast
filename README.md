@@ -1,5 +1,5 @@
 # BurntToast
-JavaScript toasts, with zero dependancies. Oh and it's responsive!
+JavaScript toasts with zero dependancies. Oh and it's responsive!
 
 BurntToast is styled after the Android Material Design toast/snackbar.
 
