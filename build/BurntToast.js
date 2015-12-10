@@ -1,7 +1,7 @@
 'use strict';
 
 function BurntToast(config) { // This is a singleton. Use makeToast to show a toast after you've instantiated BurntToast
-    var msg, parent, actionBtn;
+    var msg, parent;
 
     config = config || {}
 
@@ -13,13 +13,10 @@ function BurntToast(config) { // This is a singleton. Use makeToast to show a to
         this.el.setAttribute('id', 'burnttoast');
         this.el.classList.add('burnt-toast');
         msg = document.createElement('p');
-        msg.setAttribute('class','burnt_message');
-        actionBtn = document.createElement('span');
-        actionBtn.setAttribute('class', 'burnt_action');
+        msg.setAttribute('id','message');
         this.el.appendChild(msg);
-        this.el.appendChild(actionBtn);
 
-        if (config.wrapper) {
+        if(config.wrapper) {
             parent = document.querySelector(config.wrapper);
             parent.appendChild(this.el);
         }
@@ -27,8 +24,7 @@ function BurntToast(config) { // This is a singleton. Use makeToast to show a to
             document.body.appendChild(this.el);
         }
 
-        this.actionBtn = actionBtn;
-        this.message = msg;
+        this.message = this.el.querySelector('#message');
 
         this.el.addEventListener('click', function() {
             this.hideToast();
@@ -38,7 +34,6 @@ function BurntToast(config) { // This is a singleton. Use makeToast to show a to
     this._checkQueue = function() {
         this.el.classList.remove('top');
         this.el.classList.remove('left');
-        this.actionBtn.textContent = '';
 
         this.el.removeEventListener('transitionend', this._checkQueue);
         if (this.queue.length > 0) {
@@ -55,28 +50,18 @@ BurntToast.prototype._popUpToast = function() {
 BurntToast.prototype._makeToast = function(toastObj) {
     this.message.textContent = toastObj.message;
 
-<<<<<<< HEAD
     if(toastObj.options) {
         if(toastObj.options.hasOwnProperty('location')) {
             if(toastObj.options.location.hasOwnProperty('top') && toastObj.options.location.top) {
                 this.el.classList.add('top');
             }
             if(toastObj.options.location.hasOwnProperty('left') && toastObj.options.location.left) {
-=======
-    if (toastObj.options) {
-        if (toastObj.options.hasOwnProperty('location')) {
-            if (toastObj.options.location.hasOwnProperty('top') && toastObj.options.location.top) {
-                this.el.classList.add('top');
-            }
-            if (toastObj.options.location.hasOwnProperty('left') && toastObj.options.location.left) {
->>>>>>> master
                 this.el.classList.add('left');
             }
         }
 
-        if (toastObj.options.action) {
-            this.actionBtn.textContent = toastObj.options.action.string;
-            this.actionBtn.addEventListener('click', toastObj.options.action.callback);
+        if(toastObj.options.hasOwnProperty('action')) {
+            this.el.$.action.textContent = toast.options.action
         }
     }
 
@@ -96,11 +81,7 @@ BurntToast.prototype.hideToast = function() {
 };
 
 BurntToast.prototype.makeToast = function(string, options) {
-    options = options || {
-        duration: 1400,
-        location: { bottom: true, middle: true },
-        action: {} //example usage to pass in: { string: 'Undo', callback }
-     };
+    options = options || { duration: 1400, location: {bottom: true, middle: true} };
 
     var toastObj = {
         message: string,
