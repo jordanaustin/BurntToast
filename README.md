@@ -9,11 +9,11 @@ On mobile (small screens) BurntToast goes from a full width bar at the bottom of
 ### Using BurntToast
 Clone BurntToast or install from npm using:
 
-    $  npm install burnt-toast
+    $  npm install burnt-toast --save
 
 Using require: just require the BurntToast module and call .makeToast() like:
 
-    var burntToast = require('BurntToast');
+    var burntToast = require('burnt-toast');
     burntToast.makeToast('Mmm I like BurntToast');
 
 If using burnt toast without npm or require simply include the BurntToast.js file in your html document:
